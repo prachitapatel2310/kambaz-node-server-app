@@ -8,7 +8,7 @@ import ModulesRoutes from "./Kambaz/Modules/routes.js";
 import AssignmentsRoutes from "./Kambaz/Assignments/routes.js";
 import EnrollmentsRoutes from "./Kambaz/Enrollments/routes.js";
 import PeopleRoutes from "./Kambaz/People/routes.js";
-
+import Lab5 from "./Lab5/index.js";
 const app = express();
 
 // CORS
@@ -42,6 +42,7 @@ app.get("/", (req, res) => {
 
 
 // Routes
+Lab5(app);
 UserRoutes(app, db);
 CourseRoutes(app, db);
 ModulesRoutes(app,db);
