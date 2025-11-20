@@ -14,7 +14,8 @@ const app = express();
 // CORS
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000",
+            "kanbas-next-js-83ct.vercel.app",],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
@@ -34,6 +35,11 @@ app.use(
 );
 
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Welcome to kambaz Node server");
+});
+
 
 // Routes
 UserRoutes(app, db);
