@@ -15,7 +15,7 @@ const app = express();
 app.use(
   cors({
     origin: ["http://localhost:3000",
-            "kanbas-next-js-83ct.vercel.app",],
+            "https://kanbas-next-js-83ct.vercel.app",],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
